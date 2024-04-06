@@ -101,20 +101,20 @@ int main(){
     for(int j=0;j<negc;j++){
 
         if((-(array[j].value))>array[end].value){
-            cout << "Person " << peopleNames[array[j].serial] << " should give " << (array[end].value) << " Rs to Person " << peopleNames[array[end].serial] << endl;
+            cout << peopleNames[array[j].serial] << " should give " << (array[end].value) << " Rs to " << peopleNames[array[end].serial] << endl;
             array[j].value+=array[end].value;
             array[end].value=0;
             end--;
             j--;
         }
         else if(-(array[j].value)<array[end].value){
-            cout << "Person " << peopleNames[array[j].serial] << " should give " << -(array[j].value) << " Rs to Person " << peopleNames[array[end].serial] << endl;
+            cout<< peopleNames[array[j].serial] << " should give " << -(array[j].value) << " Rs to " << peopleNames[array[end].serial] << endl;
             array[end].value+= (array[j].value);
             array[j].value=0;
 
         }
         else if((-(array[j].value))==array[end].value){  // both equal
-            cout << "Person " << peopleNames[array[j].serial] << " should give " << -(array[j].value) << " Rs to Person " << peopleNames[array[end].serial] << endl;
+            cout << peopleNames[array[j].serial] << " should give " << -(array[j].value) << " Rs to " << peopleNames[array[end].serial] << endl;
             array[j].value=0;
             array[end].value=0;
 
@@ -122,6 +122,7 @@ int main(){
         }
     }
 }
+
 
 
 
